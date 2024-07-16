@@ -1,19 +1,102 @@
 {
-    "data": [
+    "table1": [
         {
             "id": 1,
             "name": "John Doe",
-            "age": 28
+            "age": 30
         },
         {
             "id": 2,
             "name": "Jane Smith",
-            "age": 34
+            "age": 25
+        }
+    ],
+    "table2": [
+        {
+            "id": 1,
+            "city": "New York",
+            "population": 8000000
         },
         {
-            "id": 3,
-            "name": "Michael Johnson",
-            "age": 45
+            "id": 2,
+            "city": "Los Angeles",
+            "population": 4000000
+        }
+    ],
+    "chart1": [
+        {
+            "month": "Jan",
+            "sales": 10
+        },
+        {
+            "month": "Feb",
+            "sales": 41
+        },
+        {
+            "month": "Mar",
+            "sales": 35
+        },
+        {
+            "month": "Apr",
+            "sales": 51
+        },
+        {
+            "month": "May",
+            "sales": 49
+        },
+        {
+            "month": "Jun",
+            "sales": 62
+        },
+        {
+            "month": "Jul",
+            "sales": 69
+        },
+        {
+            "month": "Aug",
+            "sales": 91
+        },
+        {
+            "month": "Sep",
+            "sales": 148
+        }
+    ],
+    "chart2": [
+        {
+            "month": "Jan",
+            "revenue": 30
+        },
+        {
+            "month": "Feb",
+            "revenue": 70
+        },
+        {
+            "month": "Mar",
+            "revenue": 80
+        },
+        {
+            "month": "Apr",
+            "revenue": 40
+        },
+        {
+            "month": "May",
+            "revenue": 60
+        },
+        {
+            "month": "Jun",
+            "revenue": 90
+        },
+        {
+            "month": "Jul",
+            "revenue": 100
+        },
+        {
+            "month": "Aug",
+            "revenue": 130
+        },
+        {
+            "month": "Sep",
+            "revenue": 150
         }
     ]
 }
