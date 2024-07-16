@@ -9,6 +9,46 @@
             "id": 2,
             "name": "Jane Smith",
             "age": 25
+        },
+        {
+            "id": 3,
+            "name": "Michael Brown",
+            "age": 28
+        },
+        {
+            "id": 4,
+            "name": "Alice Johnson",
+            "age": 35
+        },
+        {
+            "id": 5,
+            "name": "Bob Williams",
+            "age": 27
+        },
+        {
+            "id": 6,
+            "name": "Eve Brown",
+            "age": 32
+        },
+        {
+            "id": 7,
+            "name": "Charlie Davis",
+            "age": 29
+        },
+        {
+            "id": 8,
+            "name": "Grace Wilson",
+            "age": 31
+        },
+        {
+            "id": 9,
+            "name": "Harry Martinez",
+            "age": 26
+        },
+        {
+            "id": 10,
+            "name": "Isabella Anderson",
+            "age": 33
         }
     ],
     "table2": [
@@ -21,6 +61,46 @@
             "id": 2,
             "city": "Los Angeles",
             "population": 4000000
+        },
+        {
+            "id": 3,
+            "city": "Chicago",
+            "population": 2700000
+        },
+        {
+            "id": 4,
+            "city": "Houston",
+            "population": 2300000
+        },
+        {
+            "id": 5,
+            "city": "Phoenix",
+            "population": 1700000
+        },
+        {
+            "id": 6,
+            "city": "Philadelphia",
+            "population": 1600000
+        },
+        {
+            "id": 7,
+            "city": "San Antonio",
+            "population": 1500000
+        },
+        {
+            "id": 8,
+            "city": "San Diego",
+            "population": 1400000
+        },
+        {
+            "id": 9,
+            "city": "Dallas",
+            "population": 1300000
+        },
+        {
+            "id": 10,
+            "city": "San Jose",
+            "population": 1000000
         }
     ],
     "chart1": [

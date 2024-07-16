@@ -1,4 +1,3 @@
-import * as React from "react";
 import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
@@ -8,9 +7,10 @@ import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import Link from "@mui/material/Link";
-
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import BarChartIcon from "@mui/icons-material/BarChart";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import {
   ListItem,
@@ -80,15 +80,20 @@ export default function SideBar({
   open: boolean;
   toggleDrawer: () => void;
 }) {
-  const location = useLocation();
+  const navigate = useNavigate();
 
   const getLinkStyle = (path: string) => {
     return {
       textDecoration: "none",
-      color: location.pathname === path ? "blue" : "black",
-      fontWeight: location.pathname === path ? "bold" : "normal",
-      backgroundColor: location.pathname === path ? "#e0e0e0" : "transparent",
+      color: "black",
+      fontWeight: "normal",
+      backgroundColor: "transparent",
       borderRadius: "4px",
+      "&.active": {
+        color: "blue",
+        fontWeight: "bold",
+        backgroundColor: "#e0e0e0",
+      },
     };
   };
 
@@ -110,20 +115,28 @@ export default function SideBar({
         </Toolbar>
         <Divider />
         <List component="nav">
-          <ListItem
-            component={Link as React.ElementType}
+          <ListItemButton
+            component={NavLink}
             to="/tables"
-            style={getLinkStyle("/tables")}
+            onClick={() => navigate("/tables")}
+            sx={getLinkStyle("/tables")}
           >
+            <ListItemIcon>
+              <DashboardIcon />
+            </ListItemIcon>
             <ListItemText primary="Tables" />
-          </ListItem>
-          <ListItem
-            component={Link as React.ElementType}
+          </ListItemButton>
+          <ListItemButton
+            component={NavLink}
             to="/charts"
-            style={getLinkStyle("/charts")}
+            onClick={() => navigate("/charts")}
+            sx={getLinkStyle("/charts")}
           >
+            <ListItemIcon>
+              <BarChartIcon />
+            </ListItemIcon>
             <ListItemText primary="Charts" />
-          </ListItem>
+          </ListItemButton>
           <Divider sx={{ my: 1 }} />
         </List>
       </Drawer>
