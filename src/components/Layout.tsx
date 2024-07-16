@@ -4,17 +4,15 @@ import { Box } from "@mui/material";
 import Sidebar from "./SideBar";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [open, setOpen] = React.useState(true);
+  const toggleDrawer = () => {
+    setOpen(!open);
+  };
   return (
     <Box display="flex" height="100vh">
-      <Box
-        component="nav"
-        sx={{
-          width: 80,
-          flexShrink: 0,
-        }}
-      >
-        <Sidebar />
-      </Box>
+      <Sidebar open={open} toggleDrawer={toggleDrawer} />
+
+      <NavBar open={open} toggleDrawer={toggleDrawer} />
       <Box
         component="main"
         sx={{
@@ -22,7 +20,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           overflow: "auto",
         }}
       >
-        <NavBar />
         <Box padding={2}>{children}</Box>
       </Box>
     </Box>
