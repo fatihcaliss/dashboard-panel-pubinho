@@ -1,46 +1,104 @@
-# Getting Started with Create React App
+# Dashboard Panel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a basic dashboard panel with tables and charts using React, Material UI, Apex Charts, and Redux Toolkit with RTK Query.
 
-In the project directory, you can run:
+## Project Structure
 
-### `npm start`
+```plaintext
+dashboard-panel/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── charts
+│   |   |   ├── Chart1.tsx
+│   │   |   └── Chart2.tsx
+│   │   ├── tables
+│   |   |   ├── Table1.tsx
+│   │   |   └── Table2.tsx
+│   │   ├── Layout.tsx
+│   │   ├── NavBar.tsx
+│   │   └── Sidebar.tsx
+│   ├── pages/
+│   │   ├── Charts.tsx
+│   │   └── Tables.tsx
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── ...
+├── db.json
+├── package.json
+├── tsconfig.json
+└── README.md
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Structure Explained
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- public/: Contains the static assets like index.html.
+- src/: Contains the source code for the application.
+- components/: Contains the reusable components like Layout, NavBar, and Sidebar.
+- pages/: Contains the main page components like Charts and Tables.
+- App.tsx: The main application component that sets up the router.
+- index.tsx: The entry point of the React application.
+- db.json: The mock data file used by JSON Server.
+- package.json: Contains the project metadata and dependencies.
+- tsconfig.json: TypeScript configuration file.
+- README.md: The project documentation file.
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js
+- npm or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd dashboard-panel
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
+   ```bash
+   npm run json-server
+   ```
+2. Navigate to the project directory:
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Functionality
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Implemented responsive design for better accessibility on various screen sizes.
+- Added styles to highlight the active link in the sidebar.
+- Used a fixed position for both the NavBar and Sidebar for a consistent layout.
+<hr/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Tables
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Displays various datasets with functionalities for sorting, filtering, and pagination.
+- Data is fetched from the JSON server.
+- Implemented using Material UI components.
 
-## Learn More
+### Charts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Displays dynamic and interactive charts representing key data insights.
+- Utilizes ApexCharts for rendering charts.
+- Data is fetched from the JSON server.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br/>
+
+Feel free to reach out if you have any questions or need further assistance with the project setup!
