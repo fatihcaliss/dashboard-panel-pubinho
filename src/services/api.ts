@@ -35,7 +35,7 @@ export const api = createApi({
 });
 
 export const {
-  useLazyGetTable1DataQuery, // Adding lazy query
+  useLazyGetTable1DataQuery,
   useGetTable1DataQuery,
   useGetTable2DataQuery,
   useGetChart1DataQuery,
