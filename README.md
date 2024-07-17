@@ -79,6 +79,10 @@ dashboard-panel/
    ```bash
    npm start
    ```
+3. Run tests.
+   ```bash
+   npm test
+   ```
 
 ## Functionality
 
@@ -93,11 +97,20 @@ dashboard-panel/
 - Data is fetched from the JSON server.
 - Implemented using Material UI components.
 
+Note: The Table1.tsx and Table2.tsx components use different methods for filtering. The Table1.tsx component uses json-server for datasets and custom queries, while the Table2.tsx component utilizes MaterialUI's built-in filtering feature. I created them differently to showcase the MaterialUI built-in feature in Table2.tsx and the MaterialUI x-data-grid filterMode="server" feature in Table1.tsx.
+
 ### Charts
 
 - Displays dynamic and interactive charts representing key data insights.
 - Utilizes ApexCharts for rendering charts.
 - Data is fetched from the JSON server.
+
+### Bonus Feature
+
+- Implemented responsive design for better accessibility on various screen sizes.
+- Added filterDebounceMs to Table1.tsx component to optimize requests.
+- Created collapsable Sidebar.
+- Used a fixed position for both the NavBar and Sidebar for a consistent layout.
 
 <br/>
 
