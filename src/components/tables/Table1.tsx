@@ -1,6 +1,11 @@
-import React from "react";
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import { useGetTable1DataQuery } from "../../services/api";
+import React, { useState, useEffect } from "react";
+import {
+  DataGrid,
+  GridColDef,
+  GridFilterModel,
+  GridToolbar,
+} from "@mui/x-data-grid";
+import { useLazyGetTable1DataQuery } from "../../services/api";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 150 },
@@ -9,14 +14,33 @@ const columns: GridColDef[] = [
 ];
 
 const Table1: React.FC = () => {
-  const { data, error, isLoading } = useGetTable1DataQuery("");
+  const [filterModel, setFilterModel] = useState<GridFilterModel>({
+    items: [],
+  });
+  const [trigger, { data, error, isLoading }] = useLazyGetTable1DataQuery();
+
+  useEffect(() => {
+    trigger({ filterModel });
+  }, [filterModel, trigger]);
+
+  const handleFilterChange = (newFilterModel: GridFilterModel) => {
+    setFilterModel(newFilterModel);
+  };
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
 
   return (
     <div style={{ height: 400, width: "100%" }}>
-      <DataGrid rows={data || []} columns={columns} autoPageSize />
+      <DataGrid
+        rows={data || []}
+        columns={columns}
+        autoPageSize
+        filterMode="server"
+        onFilterModelChange={handleFilterChange}
+        filterDebounceMs={500}
+        slots={{ toolbar: GridToolbar }}
+      />
     </div>
   );
 };

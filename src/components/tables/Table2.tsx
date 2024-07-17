@@ -1,5 +1,5 @@
 import React from "react";
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 import { useGetTable2DataQuery } from "../../services/api";
 
 const columns: GridColDef[] = [
@@ -16,7 +16,12 @@ const Table2: React.FC = () => {
 
   return (
     <div style={{ height: 400, width: "100%" }}>
-      <DataGrid rows={data || []} columns={columns} autoPageSize />
+      <DataGrid
+        rows={data || []}
+        columns={columns}
+        autoPageSize
+        slots={{ toolbar: GridToolbar }}
+      />
     </div>
   );
 };
