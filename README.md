@@ -69,13 +69,13 @@ dashboard-panel/
    npm install
    ```
 
-### Installation
+### Running the Project
 
-1. Clone the repository:
+1. Start the JSON server to serve the mock data.
    ```bash
    npm run json-server
    ```
-2. Navigate to the project directory:
+2. Start the React development server.
    ```bash
    npm start
    ```
