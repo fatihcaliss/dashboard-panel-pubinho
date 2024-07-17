@@ -84,13 +84,6 @@ dashboard-panel/
    npm test
    ```
 
-## Functionality
-
-- Implemented responsive design for better accessibility on various screen sizes.
-- Added styles to highlight the active link in the sidebar.
-- Used a fixed position for both the NavBar and Sidebar for a consistent layout.
-<hr/>
-
 ### Tables
 
 - Displays various datasets with functionalities for sorting, filtering, and pagination.
@@ -105,7 +98,7 @@ Note: The Table1.tsx and Table2.tsx components use different methods for filteri
 - Utilizes ApexCharts for rendering charts.
 - Data is fetched from the JSON server.
 
-### Bonus Feature
+### Bonus Features
 
 - Implemented responsive design for better accessibility on various screen sizes.
 - Added filterDebounceMs to Table1.tsx component to optimize requests.
